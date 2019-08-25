@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Animations</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="animateMe">Animation IT</h1>
+        <div style="margin-left: 75px">
+            <select id="animateVal" onchange="animateOption()">
+                <optgroup label="Type1">
+                    <option value="bounce">Bounce</option>
+                    <option value="flash">Flash</option>
+                    <option value="pulse">Pulse</option>
+                    <option value="rubberBand">rubberBand</option>
+                    <option value="shake">shake</option>
+                    <option value="headShake">headShake</option>
+                    <option value="swing">swing</option>
+                    <option value="tada">tada</option>
+                    <option value="wobble">wobble</option>
+                    <option value="jello">jello</option>
+                </optgroup>
+                <optgroup label="Type2">
+                    <option value="bounceIn">bounceIn</option>
+                    <option value="bounceInDown">bounceInDown</option>
+                    <option value="bounceInLeft">bounceInLeft</option>
+                    <option value="bounceInUp">bounceInUp</option>
+                    <option value="bounceOut">bounceOut</option>
+                    <option value="bounceOutDown">bounceOutDown</option>
+                    <option value="bounceOutLeft">bounceOutLeft</option>
+                    <option value="bounceOutRight">bounceOutRight</option>
+                    <option value="bounceOutUp">bounceOutUp</option>
+                </optgroup>
+
+                <optgroup label="Type3">
+                    <option value="fadeIn">fadeIn</option>
+                    <option value="fadeInDown">fadeInDown</option>
+                    <option value="fadeInDownBig">fadeInDownBig</option>
+                    <option value="fadeInLeft">fadeInLeft</option>
+                    <option value="fadeInLeftBig">fadeInLeftBig</option>
+                    <option value="fadeInRight">fadeInRight</option>
+                    <option value="fadeInRightBig">fadeInRightBig</option>
+                    <option value="fadeInUp">fadeInUp</option>
+                    <option value="fadeInUpBig">fadeInUpBig</option>
+                    <option value="fadeOut">fadeOut</option>
+                    <option value="fadeOutDown">fadeOutDown</option>
+                    <option value="fadeOutDownBig">fadeOutDownBig</option>
+                    <option value="fadeOutLeft">fadeOutLeft</option>
+                    <option value="fadeOutLeftBig">fadeOutLeftBig</option>
+                    <option value="fadeOutRight">fadeOutRight</option>
+                    <option value="fadeOutRightBig">fadeOutRightBig</option>
+                    <option value="fadeOutUp">fadeOutUp</option>
+                    <option value="fadeOutUpBig">fadeOutUpBig</option>
+                    <option value="flipInX">flipInX</option>
+                    <option value="flipInY">flipInY</option>
+                    <option value="flipOutX">flipOutX</option>
+                    <option value="flipOutY">flipOutY</option>
+                </optgroup>
+                <optgroup label="Type3">
+                    <option>lightSpeedIn</option>
+                    <option>lightSpeedOut</option>
+                    <option>rotateIn</option>
+                    <option>rotateInDownLeft</option>
+                    <option>rotateInDownRight</option>
+                    <option>rotateInUpLeft</option>
+                    <option>rotateInUpRight</option>
+                    <option>rotateOut</option>
+                    <option>rotateOutDownLeft</option>
+                    <option>rotateOutDownRight</option>
+                    <option>rotateOutUpLeft</option>
+                    <option>rotateOutUpRight</option>
+                    <option>hinge</option>
+                    <option value="jackInTheBox">jackInTheBox</option>
+                </optgroup>
+                <optgroup label="Type4">
+                    <option>rollIn</option>
+                    <option>rollOut</option>
+                    <option>zoomIn</option>
+                    <option>zoomInDown</option>
+                    <option>zoomInLeft</option>
+                    <option>zoomInRight</option>
+                    <option>zoomInUp</option>
+                    <option>zoomOut</option>
+                    <option>zoomOutDown</option>
+                    <option>zoomOutLeft</option>
+                    <option>zoomOutRight</option>
+                    <option>zoomOutUp</option>
+                    <option>slideInDown</option>
+                    <option>slideInLeft</option>
+                    <option>slideInRight</option>
+                    <option>slideInUp</option>
+                    <option>slideOutDown</option>
+                    <option>slideOutLeft</option>
+                    <option>slideOutRight</option>
+                    <option>slideOutUp</option>
+                    <option>heartBeat</option>
+                </optgroup>
+            </select>
+        </div>
+    </div>
+
+    <script>
+        function animateOption() {
+            const val = document.getElementById('animateVal').value;
+            const element = document.querySelector('.animateMe');
+            element.classList.add('animated', val, 'fast');
+            element.addEventListener('animationend', () => {
+                element.classList.remove('animated', val, 'fast');
+            });
+        }
+    </script>
+</body>
+
+</html>
+
+<!-- bounce	flash	pulse	rubberBand
+shake	headShake	swing	tada
+wobble	jello	bounceIn	bounceInDown
+bounceInLeft	bounceInRight	bounceInUp	bounceOut
+bounceOutDown	bounceOutLeft	bounceOutRight	bounceOutUp
+fadeIn	fadeInDown	fadeInDownBig	fadeInLeft
+fadeInLeftBig	fadeInRight	fadeInRightBig	fadeInUp
+fadeInUpBig	fadeOut	fadeOutDown	fadeOutDownBig
+fadeOutLeft	fadeOutLeftBig	fadeOutRight	fadeOutRightBig
+fadeOutUp	fadeOutUpBig	flipInX	flipInY
+flipOutX	flipOutY	lightSpeedIn	lightSpeedOut
+rotateIn	rotateInDownLeft	rotateInDownRight	rotateInUpLeft
+rotateInUpRight	rotateOut	rotateOutDownLeft	rotateOutDownRight
+rotateOutUpLeft	rotateOutUpRight	hinge	jackInTheBox
+rollIn	rollOut	zoomIn	zoomInDown
+zoomInLeft	zoomInRight	zoomInUp	zoomOut
+zoomOutDown	zoomOutLeft	zoomOutRight	zoomOutUp
+slideInDown	slideInLeft	slideInRight	slideInUp
+slideOutDown	slideOutLeft	slideOutRight	slideOutUp
+heartBeat -->
