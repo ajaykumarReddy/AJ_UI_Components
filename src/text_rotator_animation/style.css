@@ -1,0 +1,31 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+}
+
+h1::before {
+    content: '';
+    animation: animate 3s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        content: 'WOW';
+    }
+    50% {
+        content: 'SUPER';
+    }
+    100% {
+        content: 'NICE';
+    }
+}

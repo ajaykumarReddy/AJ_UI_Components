@@ -1,0 +1,81 @@
+.list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  .list li {
+    flex: 1;
+  }
+  
+  .list li a {
+    text-decoration: none;
+    font-size: 40px;
+    overflow: hidden;
+    display: block;
+    text-align: center;
+    color: inherit;
+      display: block;
+  }
+  
+  .list li a span {
+        background: rgba(0, 0, 0, 0.1);
+        padding: 0.5rem;
+        font-size: 22px;
+        margin-top: 1rem;
+        display: block;
+        transform: translateY(100px);
+        transition: 0.2s;
+        opacity:0;
+  }
+  
+  .list:hover span {
+      transform: translateY(0);
+      opacity:1;
+    }
+  
+    .list li:nth-child(1) span {
+      transition-delay: 0.0s;
+    }
+   .list li:nth-child(2) span {
+      transition-delay: 0.05s;
+    }
+  
+   .list li:nth-child(3) span {
+      transition-delay: 0.1s;
+    }
+  
+  .list li:nth-child(4) span {
+      transition-delay: 0.15s;
+    }
+  
+  .list li:nth-child(5) span {
+      transition-delay: 0.2s;
+    }
+    .list li:nth-child(6) span {
+      transition-delay: 0.25s;
+    }
+  
+  
+  .list li:nth-child(1) {
+    background: #90CAF9;
+  }
+  .list li:nth-child(2) {
+    background: #80DEEA;
+  }
+  .list li:nth-child(3) {
+    background: #A5D6A7;
+  }
+  .list li:nth-child(4) {
+    background: #E6EE9C;
+  }
+  .list li:nth-child(5) {
+    background: #FFF176;
+  }
+  .list li:nth-child(6)  {
+    background: #FFD54F;
+  }
+  
+  
+  
+  
