@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Light it up!</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: grid;
+            place-items: center;
+            background: #ccc;
+            height: 70vh;
+        }
+
+        input {
+            margin-top: 50px;
+            display: none;
+        }
+
+        .light1 {
+            background-image: radial-gradient(circle, rgba(255, 255, 255, .25), transparent), radial-gradient(circle, rgba(255, 255, 255, .75), transparent);
+            background-blend-mode: hard-light, color-dodge;
+            box-sizing: border-box;
+            width: 30px;
+            height: 30px;
+            margin: 1vmin .25vmin;
+            padding: 1.5vmin;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            cursor: pointer;
+            border-radius: 100%;
+            padding: .5vmin;
+            margin: 0;
+            padding: 0;
+            outline: none;
+            transition: all .5s;
+        }
+
+        #light1:before {
+            content: "";
+            background: #000;
+            border-radius: 100%;
+            filter: blur(2vw);
+            width: 125%;
+            margin: 0 -7.5vmin;
+            height: 3vmin;
+            position: absolute;
+            bottom: -3vmin;
+            z-index: -1;
+        }
+
+        #light1:after {
+            content: "";
+            border-radius: inherit;
+            box-shadow: inset .25vmin .5vmin .25vmin rgba(255, 255, 255, .25), inset -.25vmin -.5vmin .25vmin rgba(0, 0, 0, .25);
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 1;
+            margin: -1vmin;
+        }
+
+        #light1:checked~.colorLight0 {
+            background-color: #090;
+            border: .1vmin solid #090;
+        }
+
+        #light2:checked~.colorLight1 {
+            background-color: #903;
+            border: .1vmin solid #903;
+        }
+
+        #light3:checked~.colorLight2 {
+            background-color: #039;
+            border: .1vmin solid #039;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="checkbox" name="light1" id="light1" checked>
+    <label for="light1" class="light1 colorLight0"></label>
+
+    <input type="checkbox" name="light2" id="light2">
+    <label for="light2" class="light1 colorLight1"></label>
+
+    <input type="checkbox" name="light3 " id="light3">
+    <label for="light3" class="light1 colorLight2"></label>
+</body>
+
+</html>
