@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Reveal Image On Hover</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="imagesection" id="imagesection">
+            <div class="imagea firstimg">
+                <div class="final-image">
+                    <img src="https://images.pexels.com/photos/672142/pexels-photo-672142.jpeg">
+                </div>
+            </div>
+            <div class="imagea secondimg">
+                <div class="final-image">
+                    <img src="https://images.pexels.com/photos/219938/pexels-photo-219938.jpeg">
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            let banner = document.getElementById('imagesection');
+            let devLayer = banner.querySelector('.secondimg');
+            let delta = 0;
+
+            banner.addEventListener('mousemove', function (e) {
+                delta = (e.clientX - window.innerWidth / 2) * 0.5;
+                console.log('delta....', delta);
+                devLayer.style.width = 900 + e.clientX + 'px';
+                console.log('width....', devLayer.style.width);
+            });
+        })
+    </script>
+
+</body>
+
+</html>

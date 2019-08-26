@@ -1,0 +1,29 @@
+.main {
+    width: 900px;
+  }
+  body .imagesection {
+    position: relative;
+    width: 100%;
+    height: 800px;
+    overflow: hidden;
+  }
+  body .imagea {
+    position: absolute;
+    overflow: hidden;
+  }
+  body .imagea.secondimg .final-image {
+    transform: skew(0deg);
+    margin-left: 900px;
+  }
+  body .imagea.secondimg {
+    transform: skew(0deg);
+    margin-left: -900px;
+    width: calc(50vw + 900px);
+  }
+  body .imagea .final-image {
+    height: 600px;
+  }
+  body .imagea img {
+    width: 900px;
+  }
+ 
