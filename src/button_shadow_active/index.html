@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    *,
+    *:after,
+    *:before {
+        box-sizing: border-box;
+    }
+
+    :root {
+        --bg: #fafafa;
+    }
+
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        min-height: 100vh;
+        background: var(--bg);
+        color: var(--bg);
+
+    }
+
+    .btn1 {
+        --borderWidth: 5;
+        --boxShadowDepth: 8;
+        --buttonColor: #f00;
+        --fontSize: 3;
+        --horizontalPadding: 16;
+        --verticalPadding: 8;
+        background: transparent;
+        border: calc(var(--borderWidth) * 1px) solid var(--buttonColor);
+        box-shadow: 8px 6px 0 0 #888;
+        color: var(--buttonColor);
+        cursor: pointer;
+        font-size: calc(var(--fontSize) * 1rem);
+        font-weight: bold;
+        outline: transparent;
+        padding: calc(var(--verticalPadding) * 1px) calc(var(--horizontalPadding) * 1px);
+        transition: box-shadow 0.15s ease;
+
+    }
+
+    .btn1:hover {
+        box-shadow: 4px 4px 0 0 #888;
+    }
+
+    .btn1:active {
+        box-shadow: 0 0 0 #888;
+    }
+
+    .btn2 {
+        display: inherit;
+        margin-left: 5px;
+        font-size: 20px;
+        background: #fff;
+        background-position: center;
+        transition: background 0.8s;
+        color: #000;
+        padding: 12px 17px 11px 17px;
+        border-radius: 5px;
+        box-shadow: 10px 10px 12px #000000aa;
+    }
+
+    .btn2:hover {
+        color: #FFF;
+        background: #c44040 radial-gradient(circle, transparent 1%, #c44040 1%) center/15000%;
+        box-shadow: 0px 5px 12px #000000aa;
+    }
+
+    .btn3 {
+        padding: 7px 10px;
+        font-size: 20px;
+        border-radius: 5px;
+        background: #c44040aa;
+        background-position: center;
+        transition: background 0.8s;
+        box-shadow: -10px 5px 12px #000000aa;
+        color: black;
+        text-transform: uppercase;
+    }
+
+    .btn3:hover {
+        background: #c44040 radial-gradient(circle, transparent 1%, #c44040 1%) center/15000%;
+        box-shadow: 0px 5px 12px #000000aa;
+    }
+
+    .btn3:active {
+        background-color: #FFF;
+        background-size: 100%;
+        transition: background 0s;
+    }
+</style>
+
+<body>
+    <button class="btn1">Ajay</button>
+    <button class="btn2">Ajay</button>
+    <button class="btn3">Ajay</button>
+</body>
+
+</html>
