@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Button hover effects</title>
+
+    <style>
+        *,
+        :before,
+        :after {
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        body {
+            padding: 1em;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            background: #eee;
+        }
+
+        h1 {
+            font: 300 3em/1em 'Open Sans', sans-serif;
+            color: #212121;
+            border-bottom: solid 2px #212121;
+            margin-bottom: 1em;
+            padding-bottom: 1em;
+        }
+
+        .button,
+        [class*="button-"] {
+            position: relative;
+            display: inline-block;
+            overflow: hidden;
+            /* float: left; */
+            margin: 0 1em 1em 0;
+            padding: 0 4em;
+            height: 3.5em;
+            font: 300 1em/3.5em 'Open Sans', sans-serif;
+            color: #fff;
+            background: #0090C0;
+            border: solid 1px #fff;
+            border-radius: 2px;
+            -moz-transition: ease 0.35s all;
+            -o-transition: ease 0.35s all;
+            -webkit-transition: ease 0.35s all;
+            transition: ease 0.35s all;
+        }
+
+        .button:hover,
+        [class*="button-"]:hover {
+            background: #007DA7;
+            box-shadow: 0 0 3px rgba(0, 0, 0, 0.5) inset;
+        }
+
+        .button-hover:hover {
+            line-height: 9em;
+        }
+        .button-hover:before {
+            content: attr(data-text);
+            color: #DEEFF5;
+            position: absolute;
+            top: -2.75em;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Text Slide Down Button Hover Effect</h1>
+    <a href="#" data-text="Read More" class="button-hover">Read More</a>
+    <a href="#" data-text="Learn More" class="button-hover">Learn More</a>
+    <a href="#" data-text="Full Info" class="button-hover">Full Info</a>
+    <a href="#" data-text="Download" class="button-hover">Download</a>
+</body>
+
+</html>
