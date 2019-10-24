@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Submit Button Animation With JavaScript</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Karla:400,700&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css'>
+</head>
+
+<body>
+    <div class="content">
+        <h2 class="title">Click Again To Restart</h2>
+        <div class="inner">
+            <div class="submit-buttons">
+                <div class="buttonsBlock">
+                    <h4 class="buttonsTitle">No 1</h4>
+                    <div class="submit-buttons__content">
+                        <button class="submit-button submit-button--1" type="submit" title="Submit">
+                            <span class="submit-button__pending submit-button__pending--1"></span>
+                            <span class="submit-button__text submit-button__text--1">Submit</span>
+                            <span class="submit-button__loaded submit-button__loaded--1"> <span>Success!</span></span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="buttonsBlock">
+                    <h4 class="buttonsTitle">No 2</h4>
+                    <div class="submit-buttons__content">
+                        <button class="submit-button submit-button--2" type="submit" title="Submit">
+                            <span class="submit-button__pending submit-button__pending--2"><span
+                                    class="submit-button__pending-loader--2"></span></span>
+                            <span class="submit-button__text submit-button__text--2">Submit</span>
+                            <span class="submit-button__loaded submit-button__loaded--2"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+
+        const DOM = {
+            submitBtn: '.submit-button',
+            submitPending: '.submit-button__pending',
+            submitText: '.submit-button__text',
+            submitLoaded: '.submit-button__loaded'
+        };
+
+        const findChildren = elem => {
+            return [
+                elem.querySelector(DOM.submitPending),
+                elem.querySelector(DOM.submitText),
+                elem.querySelector(DOM.submitLoaded)];
+        };
+
+        const findParent = (elem, referenceElem) => {
+            const className = referenceElem.slice(0, referenceElem.length);
+            let ind = true;
+            while (ind) {
+                if (elem.classList.contains(className)) {
+                    break;
+                } else {
+                    elem = elem.parentNode;
+                }
+            }
+            return elem;
+        };
+
+        //onclick function for buttons 
+        document.querySelectorAll(DOM.submitBtn).forEach(elem => {
+            elem.addEventListener('click', event => {
+                let clickedElem = findParent(event.target, 'submit-button');
+                const innerChildren = findChildren(clickedElem);
+                //adding active class
+                if (!clickedElem.classList.contains('js-active')) {
+                    clickedElem.classList.add('js-active');
+                    innerChildren.forEach(elem => {
+                        elem.classList.add('js-active');
+                    });
+                } else {
+                    //toggling or restart part
+                    clickedElem.classList.remove('js-active');
+                    innerChildren.forEach(elem => {
+                        elem.classList.remove('js-active');
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
