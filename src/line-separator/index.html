@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Line separator with text</title>
+    <style>
+        body {
+            font-family: 'Arial';
+            padding: 1rem;
+            max-width: 600px;
+            margin: 2rem auto;
+        }
+
+        p {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        p:before,
+        p:after {
+            content: "";
+            height: 2px;
+            background: #c5c5c5;
+            flex-grow: 1;
+        }
+
+        p:before {
+            margin-right: 10px;
+        }
+
+        p:after {
+            margin-left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <p>Hello</p>
+    </div>
+</body>
+
+</html>
