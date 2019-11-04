@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            background: lightgray;
+            font-family: 'Rubik';
+            line-height: 1.35;
+            padding: 1rem;
+        }
+
+        .elem {
+            position: relative;
+            display: flex;
+            align-items: center;
+            max-width: 400px;
+            background: #fff;
+            padding: 2rem 1rem;
+            font-size: 1.5rem;
+            margin: 2rem auto;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        .elem::before,
+        .elem::after {
+            background: linear-gradient(to bottom, transparent, #000);
+            background: #000;
+            filter: blur(3px);
+            opacity: 0.3;
+        }
+
+        .elem::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 4px;
+            width: 50%;
+            height: 100%;
+            z-index: -1;
+            transform: skewY(-2deg);
+        }
+
+        .elem:after {
+            content: "";
+            position: absolute;
+            right: 0;
+            top: 4px;
+            width: 50%;
+            height: 100%;
+            background: #000;
+            z-index: -1;
+            transform: skewY(2deg);
+
+        }
+
+        .elem:before,
+        .elem:after {
+            background: linear-gradient(to bottom, transparent, #000);
+            background: #000;
+            filter: blur(3px);
+            opacity: 0.3;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="elem">
+        <p>Hello, I'm a div with a wrapped shadow effect. Thanks for pseudo elements!</p>
+    </div>
+</body>
+
+</html>
