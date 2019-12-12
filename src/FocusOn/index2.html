@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        html {
+            --blue: #159ce4;
+            --lgt-blue: #67cff3;
+            --drk-blue: #147ec1;
+            --black: #32383c;
+        }
+
+        a {
+            color: var(--blue);
+            transition: all 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--lgt-blue);
+        }
+
+        a:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(21, 156, 228, 0.4);
+        }
+
+        a:active {
+            color: var(--drk-blue);
+        }
+
+        button {
+            display: block;
+            padding: 12px 38px;
+            font-weight: bold;
+            font-size: 16px;
+            text-align: center;
+            color: var(--blue);
+            background-color: #fff;
+            border: 2px solid var(--blue);
+            border-radius: 24px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+
+        button:hover {
+            color: #fff;
+            background-color: var(--lgt-blue);
+            border-color: var(--lgt-blue);
+        }
+
+        button:active {
+            color: #fff;
+            background-color: var(--drk-blue);
+            border-color: var(--drk-blue);
+        }
+
+        button:focus {
+            outline: none;
+            box-shadow: 0 0 0 5px rgba(21, 156, 228, 0.4);
+        }
+
+        form {
+            width: 100%;
+        }
+
+        label {
+            display: block;
+            font-size: 16px;
+            color: var(--black);
+            width: 100%;
+        }
+
+        input[type="text"] {
+            padding: 10px 16px;
+            font-size: 16px;
+            color: var(--black);
+            background-color: #fff;
+            border: 1px solid #597183;
+            border-radius: 8px;
+            margin-top: 5px;
+            width: 100%;
+            transition: all 0.3s ease;
+        }
+
+        input[type="text"]:focus {
+            outline: none;
+            box-shadow: 0 0 0 4px rgba(21, 156, 228, 0.4);
+        }
+
+        /* For Demo */
+
+        body {
+            height: 100vh;
+            margin: 0;
+            padding: 2rem;
+            display: grid;
+            grid-gap: 2rem;
+            align-items: center;
+            grid-template-columns: repeat(3, 1fr);
+            font: 16px/1.4 system-ui, -apple-system, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <p>This is a paragraph of text <a href="#0">that has a link</a> inside of it.</p>
+
+    <button>Click me</button>
+
+    <form>
+        <label>
+            Name
+            <input type="text">
+        </label>
+    </form>
+
+</body>
+
+</html>
